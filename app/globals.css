@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --surface-2: #fbfaf8;
+  --ink: #14161a;
+  --ink-muted: #5b616b;
+  --ink-faint: #8a8f97;
+  --line: #e3e1dc;
+  --line-strong: #cfccc5;
+
+  --accent: #0f4c5c;
+  --accent-hover: #0b3a47;
+  --accent-tint: rgb(15 76 92 / 0.08);
+
+  --ok: #1f7a4d;
+  --warn: #b26a00;
+  --hold: #b3261e;
+  --info: #2f5d9e;
+  --ok-tint: rgb(31 122 77 / 0.1);
+  --warn-tint: rgb(178 106 0 / 0.1);
+  --hold-tint: rgb(179 38 30 / 0.08);
+  --info-tint: rgb(47 93 158 / 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-tint: var(--accent-tint);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-hold: var(--hold);
+  --color-info: var(--info);
+  --color-ok-tint: var(--ok-tint);
+  --color-warn-tint: var(--warn-tint);
+  --color-hold-tint: var(--hold-tint);
+  --color-info-tint: var(--info-tint);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+
+  --radius-md: 6px;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+}
+
+/* Specs, grades, dimensions, prices: monospace with tabular numerals */
+.num {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
