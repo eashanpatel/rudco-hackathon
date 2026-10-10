@@ -129,8 +129,8 @@ a {
 
 @keyframes rise {
   from {
-    opacity: 0;
-    transform: translateY(6px);
+    background-color: var(--ok-tint);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
